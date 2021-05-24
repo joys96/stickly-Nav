@@ -1,0 +1,100 @@
+body {
+    background-color: rgb(21, 49, 43);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.sticky-nav-header {
+    display: flex; /*복잡한 계산 없이 요소의 크기와 순서를 유연하게 배치*/
+    background: url(nav.jpg);
+    width: 100vw;
+    height: 450px;
+    background-size: cover; /*배경을 사용하는 요소를 다 채울 수 있게 이미지를 확대 또는 축소. 가로 세로 비율은 유지한다.*/
+    align-items: flex-end;
+}
+
+.sticky-nav-menu.fixed {
+    top: 0;
+    position: fixed;
+  }
+
+.sticky-nav-menu {
+    background: #1d46a0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*position: relative;  /* 자기 자신을 기준으로 top, right, bottom, left의 값에 따라 오프셋을 적용합니다.
+                             오프셋은 다른 요소에는 영향을 주지 않습니다. 따라서 페이지 레이아웃에서 
+                             요소가 차지하는 공간은 static일 때와 같습니다.*/
+                             
+}
+
+.sticky-nav-menu a {
+    width: 90px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    /*border-radius: 30%;  테두리를 둥글게 한다.*/
+}
+
+
+.sticky-nav-article {
+    background-color: white ;
+    width: 750px;
+    padding: 60px;
+    margin: 70px 0;
+    border-radius: 10px;
+    text-align: justify;
+}
+
+.sticky-nav-article p {
+    margin-top: 30px;
+}
+
+@media (max-width: 650px){
+    
+    .sticky-nav-header {
+        height: 270px;
+        background-position: 0 -100px;
+    }
+    
+    .sticky-nav-article {
+        width: 90vw;
+        padding: 50px;
+        margin: 30px 0;
+    }
+}
+@media (min-width: 651px) and (max-width: 900px){
+    .sticky-nav-header { background-position: 0 -80px; }
+  .sticky-nav-article { width: 80vw; }
+}
+@media (min-width: 901px) and (max-width: 1100px) { .sticky-nav-header { background-position: 0 -190px; } }
+@media (min-width: 1101px) { .sticky-nav-header { background-position: 0 -310px; } }
+
+
+
+#rain {
+    display: flex;
+    margin-top: 30px;
+}
+
+#rain p {
+    margin-top: 0px;
+    margin-left: 20px;
+    
+}
+#img {
+    display: inline-flex;
+    margin-top: 30px;
+    align-items: flex-start;
+    
+}
+#img p  {
+    margin-top: 0px;
+    margin-right: 20px;
+}
